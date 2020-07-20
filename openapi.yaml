@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: API de Ejemplo
+  description: Esta es un API de prueba.
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/ismael.ait/sample/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: https://api.example.com/v1
+paths:
+  /users/{id}:
+    get:
+      summary: Devuelve un usuario por su id.
+      parameters:
+      - name: id
+        in: path
+        description: El id del usuario.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+        "400":
+          description: El id especificado no es válido.
+        "404":
+          description: No existe un usuario con dicho id.
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 10
+        name:
+          type: string
+          example: name
