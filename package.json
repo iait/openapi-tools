@@ -1,0 +1,23 @@
+{
+  "name": "openapi",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "swagger-editor-live": "^2.1.8",
+    "swagger-editor-dist": "^3.11.7",
+    "swagger-ui-watcher": "^2.1.11",
+    "swagger-ui": "^3.28.0",
+    "mockserver-node": "^5.11.0",
+    "mockserver-client": "^5.11.0",
+    "open": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "editor": "swagger-editor-live ./openapi.yaml --host=localhost --port=3000",
+    "ui": "swagger-ui-watcher -h localhost -p 3001 ./openapi.yaml",
+    "mock": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
