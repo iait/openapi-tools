@@ -1,20 +1,20 @@
-Levanta editor que graba automáticamente en **openapi.yaml**.
+# Herramientas para editar, visualizar, y mockear documentación REST en OpenAPI
 
-En **swagger-tools/editor**
 ```
 $ npm install
 ```
+
+Para lanzar el editor:
 ```
-$ npm run swagger-editor
+$ npm run edit
 ```
 
-Levanta documentación obtenidad de **openapi.yaml**.
-NOTA: no se actualiza automáticamente ante cambios en el archivo.
+Para lanzar la visualización de la documentación:
+```
+$ npm run ui
+```
 
-En **swagger-tools/ui**
+Para crear los mocks:
 ```
-$ npm install
-```
-```
-$ npm run swagger-ui
+$ npm run mock
 ```
